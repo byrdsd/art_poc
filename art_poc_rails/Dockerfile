@@ -27,18 +27,17 @@ RUN apk add --update --no-cache \
       yarn
 
 RUN gem install bundler -v 2.2.6
-RUN bundle config --global frozen 1
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle config build.nokogiri --use-system-libraries
-RUN bundle install
+RUN bundle check || bundle install
 
 COPY package.json yarn.lock ./
 
-RUN yarn install
+RUN yarn install --check-files
 
-COPY . .
+COPY . ./
 
 ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
