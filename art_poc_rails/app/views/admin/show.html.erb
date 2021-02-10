@@ -1,0 +1,10 @@
+<section class="Blocks">
+  <button>New</button>
+  <% @blocks.each do |block| %>
+    <div class="Block">
+      <%= block[:title] %>
+      <button>Edit</button>
+      <button>Delete</button>
+    </div>
+  <% end %>
+</section>

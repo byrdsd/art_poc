@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do |i|
+  block = Block.create({title: "This is block #{i}"})
+  Flashcard.create(front: "This is the first front", back: "This is the back", block: block)
+  Flashcard.create(front: "This is the second front", back: "This is the back", block: block)
+  Flashcard.create(front: "This is the third front", back: "This is the back", block: block)
+end
