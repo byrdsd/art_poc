@@ -1,0 +1,31 @@
+<section class="EditBlock">
+  <%= form_with model: @block, url: "/admin/blocks/#{@id}", local: true do |block_form| %>
+    <%= block_form.label :title %>
+    <%= block_form.text_field :title %>
+    <%= block_form.submit %>
+  <% end %>
+</section>
+
+<section class="Flashcards">
+  <% @block.flashcards.each do |flashcard| %>
+    <%= form_with model: flashcard, url: "/admin/flashcards/#{flashcard.id}" do |flashcard_form| %>
+      <%= flashcard_form.label :front %>
+      <%= flashcard_form.text_field :front %>
+      <%= flashcard_form.label :back %>
+      <%= flashcard_form.text_field :back %>
+      <%= flashcard_form.hidden_field :block_id, value: @id %>
+      <%= flashcard_form.submit %>
+      <%= button_to "Delete", "/admin/flashcards/#{flashcard.id}", method: :delete, class: "Flashcards-delete" %>
+    <% end %>
+  <% end %>
+  <%= form_with model: @Flashcards, url: "/admin/flashcards" do |flashcard_form| %>
+    <%= flashcard_form.label :front %>
+    <%= flashcard_form.text_field :front %>
+    <%= flashcard_form.label :back %>
+    <%= flashcard_form.text_field :back %>
+    <%= flashcard_form.hidden_field :block_id, value: @id %>
+    <%= flashcard_form.submit %>
+  <% end %>
+</section>
+
+<a href="/admin">Back</a>

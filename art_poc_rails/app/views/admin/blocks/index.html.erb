@@ -1,0 +1,10 @@
+<section class='Blocks'>
+  <a href="/admin/blocks/new">New</a>
+  <% @blocks.each do |block| %>
+    <div class='Block'>
+      <%= block[:title] %>
+      <a href="/admin/blocks/<%= block[:id] %>/edit">Edit</a>
+      <button data-block-action='delete' data-block-id='<%= block[:id] %>'>Delete</button>
+    </div>
+  <% end %>
+</section>
