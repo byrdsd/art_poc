@@ -1,0 +1,49 @@
+.Flashcard {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.Flashcard--flipped {
+  transform: scale3d(-1.05, 1.05, 1.05);
+}
+
+.Flashcard-front {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  transition: z-index 0.5s;
+  border-top: 2px solid #555;
+}
+
+.Flashcard--flipped .Flashcard-front {
+  z-index: 0;
+}
+
+.Flashcard-back {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fafafa;
+  transform: scaleX(-1);
+}
+
+@keyframes flip {
+  from {
+    transform: scale3d(1, 1, 1)
+  }
+  to {
+    transform: scale3d(-1, 1, 1)
+  }
+}
