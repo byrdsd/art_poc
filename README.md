@@ -11,8 +11,8 @@ docker-compose exec app rake db:create db:migrate db:seed
 Visit localhost:3000/admin for block admin, localhost:3000/blocks for blocks in json format.
 
 Start the yarn application
-cd 
 ```
+cd art_poc_react
 yarn start
 ```
 Visit localhost:3001 for blocks output.
