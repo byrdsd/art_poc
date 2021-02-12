@@ -1,5 +1,7 @@
-<%= form_for Block.new, url: "/admin/blocks", local: true do |block_form| %>
-  <%= block_form.label :title %>
-  <%= block_form.text_field :title %>
-  <%= block_form.submit %>
-<% end %>
+<main>
+  <%= form_for Block.new, url: "/admin/blocks", class: "Form", local: true do |block_form| %>
+    <%= block_form.label :title, class: "Form-label" %>
+    <%= block_form.text_field :title, class: "Form-text" %>
+    <%= block_form.submit class: "Form-submit" %>
+  <% end %>
+</main>

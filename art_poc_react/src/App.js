@@ -13,6 +13,7 @@ function App() {
       const blocks = await response.json();
       setBlocks(blocks);
       setPage(window.location.pathname);
+      console.log(blocks)
     })();
   }, [])
 
@@ -24,7 +25,7 @@ function App() {
   const renderBlock = () => {
     const blockPath = window.location.pathname.match(/\/block\/(\d)/);
     if (blockPath) {
-      const block = blocks.find(block => block.id = blockPath[1])
+      const block = blocks.find(block => block.id === blockPath[1] * 1)
       return block ?
               <Block title={block.title}
                      flashcards={block.flashcards}
