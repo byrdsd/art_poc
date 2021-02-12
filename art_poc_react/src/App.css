@@ -23,7 +23,7 @@ html {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +34,22 @@ html {
 
 .App-link {
   color: #61dafb;
+}
+
+.App-home {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 12px auto;
+  color: #fff;
+  background-color: #499041;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.76);
+  border-radius: 2px;
+  transition: background-color .15s;
+}
+
+.App-home:hover {
+  background-color: #2a6c23;
 }
 
 @keyframes App-logo-spin {
