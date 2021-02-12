@@ -23,7 +23,6 @@
     background-color: #fff;
     transition: z-index 0.6s;
     border-top: 2px solid #555;
-    overflow: auto;
   }
   
   &-back {
@@ -34,7 +33,6 @@
     padding: 20px;
     background-color: #fafafa;
     transform: scaleX(-1);
-    overflow: auto;
     text-align: left;
   }
 
@@ -47,5 +45,17 @@
     top: 0;
     right: 0;
     left: 0;
+  }
+
+  &-rotateIcon {
+    position: absolute;
+    z-index: 1;
+    bottom: 4px;
+    right: 4px;
+  }
+
+  &-content {
+    height: 100%;
+    overflow: auto;
   }
 }

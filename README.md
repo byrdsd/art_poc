@@ -28,6 +28,4 @@ Started out with some simple models and tests to lay out the basic interface, bu
 When planning the project I estimated a little backwards; I expected to spend the most time on the react frontend, but found myself spending more time on the backend. The frontend, by contrast, was quite smooth and straightforward. There were a lot of typical Rails configurations that go into new projects that tripped me up, since I spend most of my time in Rails on existing repositories. After working through it, I believe I'd be able to do it again in a fraction of the time.
 
 ## Caveats
-The docker container is causing some strangeness where after starting up, if you run `docker-compose down`, then `docker-compose up -d` again, it fails to find the gems. I suspect there is an issue with the way I've configured Docker here with how gems are resolved. I didn't get time to dig deeper on this.
-
-I'd like to implement more testing; what's there is very barebones currently. That said, for a POC, I wouldn't typically expect to see huge test coverage to begin with. I would expect to see it ramp up as a project moved into a prototyping phase.
+I'd like to implement more testing; what's there is very barebones currently. That said, for a POC, I wouldn't typically expect to see huge test coverage to begin with, mostly around requests and models. I would expect to see it ramp up as a project moved into a prototyping phase.
