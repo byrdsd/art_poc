@@ -12,11 +12,11 @@ const Home = ({ blocks }) => {
                flashcards={featuredBlock.flashcards}
                key={featuredBlock.key} /> : ''
       }
-      <section class="Home-linkList">
+      <section className="Home-linkList">
         {
           blocks.map(block => {
             return (
-              <a href={`block/${block.id}`} class="Home-link">
+              <a href={`block/${block.id}`} className="Home-link" key={block.id}>
                 {block.title}
               </a>
             )

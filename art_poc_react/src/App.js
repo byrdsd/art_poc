@@ -24,7 +24,7 @@ function App() {
   const renderBlock = () => {
     const blockPath = window.location.pathname.match(/\/block\/(\d)/);
     if (blockPath) {
-      const block = blocks[blockPath[1]]
+      const block = blocks.find(block => block.id = blockPath[1])
       return block ?
               <Block title={block.title}
                      flashcards={block.flashcards}
@@ -39,7 +39,7 @@ function App() {
       </header>
       {renderHome()}
       {renderBlock()}
-      {page !== '/' ? <a class="App-home" href="/">Home</a> : ''}
+      {page !== '/' ? <a className="App-home" href="/">Home</a> : ''}
     </div>
   );
 }

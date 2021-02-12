@@ -6,14 +6,14 @@ const Flashcard = ({ front, front_image, back, back_image }) => {
       <div className="Flashcard-front">
         {
           front_image ?
-            <img class="Flashcard-image" alt="" src={front}></img> :
+        <img className="Flashcard-image" alt="  " src={front}></img> :
             front
         }
       </div>
       <div className="Flashcard-back">
         {
           back_image ?
-          <img class="Flashcard-image" alt="" src={back}></img> :
+          <img className="Flashcard-image" alt="" src={back}></img> :
           back
         }
       </div>
