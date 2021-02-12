@@ -1,5 +1,5 @@
+import './Flashcard.scss';
 import React from 'react';
-import './Flashcard.css';
 
 const Flashcard = ({ front, front_image, back, back_image }) => {
   const [flipped, setFlipped] = React.useState(false);

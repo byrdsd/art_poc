@@ -1,4 +1,4 @@
-import './Block.css';
+import './Block.scss';
 import Flashcard from './Flashcard';
 
 const Block = ({title, flashcards}) => {

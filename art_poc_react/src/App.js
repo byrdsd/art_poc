@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import Home from './components/Home';
 import Block from './components/Block';
