@@ -23,7 +23,7 @@ function App() {
   }
 
   const renderBlock = () => {
-    const blockPath = window.location.pathname.match(/\/block\/(\d)/);
+    const blockPath = window.location.pathname.match(/\/block\/(\d*)/);
     if (blockPath) {
       const block = blocks.find(block => block.id === blockPath[1] * 1)
       return block ?
