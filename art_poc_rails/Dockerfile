@@ -1,6 +1,8 @@
 FROM ruby:3.0.0-alpine3.13
 
 ENV BUNDLER_VERSION=2.2.6
+ENV GEM_HOME="/usr/local/bundle"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 RUN apk add --update --no-cache \
       binutils-gold \
       build-base \
