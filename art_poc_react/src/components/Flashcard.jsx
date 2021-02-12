@@ -1,10 +1,22 @@
 import './Flashcard.css';
 
-const Flashcard = ({ front, back }) => {
+const Flashcard = ({ front, front_image, back, back_image }) => {
   return (
     <div className="Flashcard" onClick={(e) => e.target.closest('.Flashcard').classList.toggle('Flashcard--flipped')}>
-      <div className="Flashcard-front">{front}</div>
-      <div className="Flashcard-back">{back}</div>
+      <div className="Flashcard-front">
+        {
+          front_image ?
+            <img class="Flashcard-image" alt="" src={front}></img> :
+            front
+        }
+      </div>
+      <div className="Flashcard-back">
+        {
+          back_image ?
+          <img class="Flashcard-image" alt="" src={back}></img> :
+          back
+        }
+      </div>
     </div>
   );
 };

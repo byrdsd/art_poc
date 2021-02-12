@@ -8,6 +8,7 @@
   box-shadow: 0 8px 16px rgba(0,0,0,.2);
   transition: transform 0.6s;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .Flashcard--flipped {
@@ -23,6 +24,7 @@
   background-color: #fff;
   transition: z-index 0.5s;
   border-top: 2px solid #555;
+  overflow: auto;
 }
 
 .Flashcard--flipped .Flashcard-front {
@@ -37,13 +39,13 @@
   padding: 20px;
   background-color: #fafafa;
   transform: scaleX(-1);
+  overflow: auto;
+  text-align: left;
 }
 
-@keyframes flip {
-  from {
-    transform: scale3d(1, 1, 1)
-  }
-  to {
-    transform: scale3d(-1, 1, 1)
-  }
+.Flashcard-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
