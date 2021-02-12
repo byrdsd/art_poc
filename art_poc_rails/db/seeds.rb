@@ -6,9 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do |i|
-  block = Block.create({title: "This is block #{i}"})
-  Flashcard.create(front: "This is the first front", back: "This is the back", block: block)
-  Flashcard.create(front: "This is the second front", back: "This is the back", block: block)
-  Flashcard.create(front: "This is the third front", back: "This is the back", block: block)
-end
+block = Block.create({title: "A trio of flashcards"})
+Flashcard.create(front: "Front of card 1", back: "Back of card 1", block: block)
+Flashcard.create(front: "Front of card 2", back: "/images/coffee.jpg", block: block, back_image: true)
+Flashcard.create(front: "Front of card 3", back: "Café au lait crema so cup est single shot acerbic. Saucer as, black crema organic single origin mocha. Half and half as iced caffeine robusta wings instant. Caramelization brewed con panna, aftertaste, seasonal, froth and, a medium ristretto caramelization caffeine. Mocha crema, lungo, bar, roast in coffee that latte as grinder latte. Cortado, acerbic, grounds coffee doppio brewed sweet. Id, plunger pot single shot, filter, galão spoon blue mountain aged beans. As whipped et chicory aftertaste java robusta est half and half.", block: block)

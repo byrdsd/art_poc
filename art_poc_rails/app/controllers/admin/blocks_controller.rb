@@ -13,18 +13,24 @@ class Admin::BlocksController < ApplicationController
   end
 
   def create
-    block = Block.create(title: params[:title])
-    redirect_to admin_root_path
+    block = Block.create(block_params)
+    redirect_to edit_admin_block_path block
   end
 
   def update
     block = Block.find(params[:id])
-    block.update(title: params[:block][:title])
+    block.update(block_params)
     redirect_to request.referrer
   end
 
   def destroy
     block = Block.find(params[:id])
     block.destroy
+  end
+
+  private
+
+  def block_params
+    params.require(:block).permit(:title)
   end
 end

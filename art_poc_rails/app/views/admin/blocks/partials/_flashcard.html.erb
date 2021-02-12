@@ -1,0 +1,14 @@
+<div class="Form-fieldSet">
+  <%= form.label :front, for: "front#{id}", class: "Form-label" %>
+  <%= form.text_area :front, id: "front#{id}", class: "Form-text" %>
+  <%= form.check_box :front_image, id: "front_image#{id}", class: "Form-checkbox", value: true %>
+  <%= form.label :front_image, for: "front_image#{id}", class: "Form-label" %>
+</div>
+<div class="Form-fieldSet">
+  <%= form.label :back, for: "back#{id}", class: "Form-label" %>
+  <%= form.text_area :back, id: "back#{id}", class: "Form-text" %>
+  <%= form.check_box :back_image, id: "back_image#{id}", class: "Form-checkbox", value: true %>
+  <%= form.label :back_image, for: "back_image#{id}", class: "Form-label" %>
+</div>
+<%= form.hidden_field :block_id, value: block_id %>
+<%= form.submit class: "Form-submit" %>

@@ -3,4 +3,13 @@
   background-color: #eee;
   padding: 20px;
   justify-content: flex-end;
+
+  &-back {
+    margin-right: 24px;
+    color: #000;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

@@ -7,3 +7,16 @@
     display: inline-block;
   }
 }
+
+.Flashcard {
+  margin: 12px auto;
+
+  &-delete {
+    background-color: #833;
+    color: #fff;
+    padding: 12px 24px;
+    box-shadow: 0 2px 4px #333;
+    border: none;
+    cursor: pointer;
+  }
+}

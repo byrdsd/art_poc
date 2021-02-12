@@ -1,7 +1,5 @@
-<%= form_with model: @block, url: "/admin/blocks", local: true do |block_form| %>
+<%= form_for Block.new, url: "/admin/blocks", local: true do |block_form| %>
   <%= block_form.label :title %>
   <%= block_form.text_field :title %>
   <%= block_form.submit %>
 <% end %>
-
-<a href="/admin">Back</a>

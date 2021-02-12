@@ -1,0 +1,30 @@
+.Form {
+  margin: 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+
+  &-fieldSet {
+    display: block;
+    margin-top: 24px;
+  }
+
+  &-text {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+  }
+
+  &-submit {
+    background-color: #4abf6b;
+    padding: 12px 24px;
+    margin: 12px 0;
+    border: 0;
+    box-shadow: 0 2px 4px #333;
+    cursor: pointer;
+  }
+}
