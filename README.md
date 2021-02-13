@@ -15,7 +15,7 @@ Start the yarn application
 cd art_poc_react
 yarn start
 ```
-Visit localhost:3001 for blocks output.
+Visit localhost:3001 for the frontend.
 
 ## Overview
 First, take a look at the whiteboard diagram, which provides a rough outline of estimated times and some design diagrams.
